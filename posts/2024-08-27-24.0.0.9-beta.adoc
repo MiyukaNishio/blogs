@@ -68,7 +68,7 @@ For example, the `ConnectionPool` component requires the following configuration
 ----
 
 
-By default, all OpenTelemetry data is exported to link:https://opentelemetry.io/docs/languages/java/exporters/#otlp[OTLP]. You can set a different exporter by specifying the following system property or environment variable:
+By default, all OpenTelemetry data is exported to link:https://opentelemetry.io/docs/languages/java/configuration/#properties-exporters[OTLP]. You can set a different exporter by specifying the following system property or environment variable:
 
 * System property: `otel.metrics.exporter`
 * Environment variable: `OTEL_METRICS_EXPORTER`
@@ -113,7 +113,7 @@ You can set configuration properties in any of the link:{url-prefix}/docs/latest
 
 To separately configure multiple applications in a server, you can configure OpenTelemetry with application configuration. However, you cannot collect runtime-level logs this way.
 
-By default, all OpenTelemetry data is exported to link:https://opentelemetry.io/docs/languages/java/exporters/#otlp[OTLP]. You can set a different exporter by specifying the following system property or environment variable:
+By default, all OpenTelemetry data is exported to link:https://opentelemetry.io/docs/languages/java/configuration/#properties-exporters[OTLP]. You can set a different exporter by specifying the following system property or environment variable:
 
 * System property: `otel.logs.exporter`
 * Environment variable: `OTEL_LOGS_EXPORTER`
