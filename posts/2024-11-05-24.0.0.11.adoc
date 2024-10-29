@@ -84,17 +84,17 @@ image::img/blog/blog_btn_stack.svg[Ask a question on Stack Overflow, align="cent
 [#instant]
 == Use Liberty InstantOn with authorization and messaging features
 
-InstantOn supports link:{url-prefix}/docs/latest/instanton.html#supported-features[a subset of Open Liberty features]. As of the 24.0.0.11 release, the following features are enhanced to support InstantOn:
+InstantOn supports link:{url-prefix}/docs/latest/instanton.html#supported-features[a subset of Open Liberty features]. As of the 24.0.0.11 release, the following features are added to this collection:
 
 * link:{url-prefix}/docs/latest/reference/feature/jacc-1.5.html[Java Authorization Contract for Containers (jacc-1.5)].
 * link:{url-prefix}/docs/latest/reference/feature/appAuthorization-2.0.html[Jakarta Authorization 2.0 (appAuthorization-2.0)]
 * link:{url-prefix}/docs/latest/reference/feature/appAuthorization-2.1.html[Jakarta Authorization 2.1  (appAuthorization-2.1)]
 * link:{url-prefix}/docs/latest/reference/feature/wasJmsServer-1.0.html[Message Server 1.0 (wasJmsServer-1.0)]
-* link:{url-prefix}/docs/latest/reference/feature/messagingServer-3.0.html[Messaging Server 3.0 (messagingServer-3.0.html)]
+* link:{url-prefix}/docs/latest/reference/feature/messagingServer-3.0.html[Messaging Server 3.0 (messagingServer-3.0)]
 * link:{url-prefix}/docs/latest/reference/feature/wasJmsClient-2.0.html[JMS Client for Message Server 2.0 (wasJmsClient-2.0)]
-* link:{url-prefix}/docs/latest/reference/feature/messagingClient-3.0.html[Messaging Server Client 3.0 (messagingClient-3.0.html)]
+* link:{url-prefix}/docs/latest/reference/feature/messagingClient-3.0.html[Messaging Server Client 3.0 (messagingClient-3.0)]
 
-This enhancement enables you to rapidly deploy applications that use these features by using Open Liberty InstantOn. For more information, see link:{url-prefix}/docs/latest/instanton.html[Faster startup for containerized applications with Open Liberty InstantOn].
+With this enhancement, you can rapidly deploy applications that use these features by using Open Liberty InstantOn. For more information, see link:{url-prefix}/docs/latest/instanton.html[Faster startup for containerized applications with Open Liberty InstantOn].
 
 
 [#guide]
