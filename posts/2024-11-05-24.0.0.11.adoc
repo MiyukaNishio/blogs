@@ -43,7 +43,7 @@ If you're using link:{url-prefix}/guides/maven-intro.html[Maven], include the fo
 <plugin>
     <groupId>io.openliberty.tools</groupId>
     <artifactId>liberty-maven-plugin</artifactId>
-    <version>3.8.2</version>
+    <version>3.11.1</version>
 </plugin>
 ----
 
