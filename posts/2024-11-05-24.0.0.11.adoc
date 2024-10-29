@@ -92,7 +92,7 @@ InstantOn supports link:{url-prefix}/docs/latest/instanton.html#supported-featur
 * link:{url-prefix}/docs/latest/reference/feature/wasJmsServer-1.0.html[Message Server 1.0 (wasJmsServer-1.0)]
 * link:{url-prefix}/docs/latest/reference/feature/messagingServer-3.0.html[Messaging Server 3.0 (messagingServer-3.0.html)]
 * link:{url-prefix}/docs/latest/reference/feature/wasJmsClient-2.0.html[JMS Client for Message Server 2.0 (wasJmsClient-2.0)]
-* link:{url-prefix}/docs/latest/reference/feature/messagingClient-3.0.html[Messaging Server Client (messagingClient-3.0.html)]
+* link:{url-prefix}/docs/latest/reference/feature/messagingClient-3.0.html[Messaging Server Client 3.0 (messagingClient-3.0.html)]
 
 This enhancement enables you to rapidly deploy applications that use these features by using Open Liberty InstantOn. For more information, see link:{url-prefix}/docs/latest/instanton.html[Faster startup for containerized applications with Open Liberty InstantOn].
 
