@@ -2,7 +2,8 @@
     "blog_tags": [
         {
             "name": "announcements",
-            "posts": ["24.0.0.11-beta", "24.0.0.10",
+            "posts": ["24.0.0.11",
+                      "24.0.0.11-beta", "24.0.0.10",
                       "24.0.0.10-beta", "24.0.0.9",
                       "24.0.0.9-beta", "liberty-developer-essentials-badge",
                       "24.0.0.8", "24.0.0.8-beta",
@@ -171,7 +172,7 @@
         },
         {
             "name": "release",
-            "posts": ["24.0.0.11-beta",
+            "posts": ["24.0.0.11", "24.0.0.11-beta",
                       "24.0.0.10", "24.0.0.10-beta",
                       "24.0.0.9", "24.0.0.9-beta",
                       "24.0.0.8", "24.0.0.8-beta",
@@ -567,7 +568,7 @@
         },
         {
             "name": "performance-enhancements",
-            "posts": ["24.0.0.11-beta",
+            "posts": ["24.0.0.11", "24.0.0.11-beta",
                       "five-java-dev-musthaves-fast-startup", "rapid-startup-without-compromise",
                       "liberty-on-amazon-ecs","virtual-threads-case-study",
                       "24.0.0.6", "24.0.0.3",
