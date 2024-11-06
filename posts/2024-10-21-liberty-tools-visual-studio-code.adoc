@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Effective cloud native development with Open Liberty in Visual Studio Code"
+title: "Visual Studio Code: Effective cloud-native Java app development with Liberty Tools"
 # Do NOT change the categories section
 categories: blog
-author_picture: https://avatars3.githubusercontent.com/GraceJansen 
-author_github: https://github.com/GraceJansen 
-seo-title: Effective cloud native development with Open Liberty in Visual Studio Code - OpenLiberty.io
+author_picture: https://avatars3.githubusercontent.com/GraceJansen
+author_github: https://github.com/GraceJansen
+seo-title: "Visual Studio Code: Effective cloud-native Java app development with Liberty Tools - OpenLiberty.io"
 seo-description: Liberty Tools for Visual Studio Code enables fast, easy and efficient development of cloud native Java applications with Open Liberty.
 blog_description: "Liberty Tools for Visual Studio Code enables fast, easy and efficient development of cloud native Java applications with Open Liberty."
 open-graph-image: https://openliberty.io/img/twitter_card.jpg
@@ -13,7 +13,7 @@ open-graph-image-alt: Open Liberty Logo
 redirect_link: https://developer.ibm.com/articles/awb-effective-cloud-native-development-open-liberty-vs-code/
 permalink: /blog/redirected.html
 ---
-= Effective cloud native development with Open Liberty in Visual Studio Code
+= Visual Studio Code: Effective cloud-native Java app development with Liberty Tools
 Grace Jansen <https://github.com/GraceJansen>
 //Blank line here is necessary before starting the body of the post.
 
