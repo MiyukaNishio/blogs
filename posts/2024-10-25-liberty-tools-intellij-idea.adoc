@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "IntelliJ IDEA: Effective cloud-native Java app development with Open Liberty in IntelliJ IDEA"
+title: "IntelliJ IDEA: Effective cloud-native Java app development with Liberty Tools"
 # Do NOT change the categories section
 categories: blog
 author_picture: https://avatars3.githubusercontent.com/GraceJansen
 author_github: https://github.com/GraceJansen
-seo-title: "IntelliJ IDEA: Effective cloud-native Java app development with Open Liberty in IntelliJ IDEA - OpenLiberty.io"
+seo-title: "IntelliJ IDEA: Effective cloud-native Java app development with Liberty Tools - OpenLiberty.io"
 seo-description: Use Liberty Tools for IntelliJ IDEA to enable rapid, easy, and efficient development of cloud-native Java applications with Open Liberty.
 blog_description: "Use Liberty Tools for IntelliJ IDEA to enable rapid, easy, and efficient development of cloud-native Java applications with Open Liberty."
 open-graph-image: https://openliberty.io/img/twitter_card.jpg
