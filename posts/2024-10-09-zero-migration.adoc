@@ -26,7 +26,7 @@ Updating an application runtime is, however, typically a grueling task to undert
 
 Now multiply these concerns by the hundreds or thousands of deployments of your microservices, each containing an instance of the application runtime, and it's no wonder that many applications remain on old versions and teams pursue upgrades only when deemed absolutely necessary. This growing technical debt not only delays the benefits provided by newer releases, including security fixes, but can also snowball into making the eventual migration process that much more difficult and risky.
 
-Although container image scanning is improving, containers can further exasperate the problem by obfuscating old, possibly unsupported, runtimes and dependencies. Teams might not even be aware of an aging runtime and the potential security risks it could pose.
+Although container image scanning is improving, containers can further exacerbate the problem by obfuscating old, possibly unsupported, runtimes and dependencies. Teams might not even be aware of an aging runtime and the potential security risks it could pose.
 
 ## Liberty's zero-migration architecture
 
@@ -73,9 +73,9 @@ Proactive security fixes (security fixes we automatically make available when we
 [cols="3,2,2", options="header"]
 |=======================================================================================
 | Support status                       | All releases | Releases ending in “.3”, “.6”, “.9” or “.12”
-| Support Provided         | For 5 years  | For 5 years                                 
-| iFix Eligible            | For 24 weeks | For 2 years                                 
-| Proactive Security Fixes | Most recent  | Most recent 2                               
+| Support Provided         | For 5 years  | For 5 years
+| iFix Eligible            | For 24 weeks | For 2 years
+| Proactive Security Fixes | Most recent  | Most recent 2
 |=======================================================================================
 
 Our prebuilt link:/docs/latest/container-images.html[Liberty container images] are rebuilt weekly for the versions eligible for the proactive security fixes, pulling in any Java and UBI fixes that have been released since the previous build of the image. This provides you with a great base image for your application, while retaining control over which Liberty iFixes you want to apply to your image.
