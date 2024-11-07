@@ -6,8 +6,8 @@ categories: blog
 author_picture: https://avatars3.githubusercontent.com/dmuelle
 author_github: https://github.com/dmuelle
 seo-title: 24.0.0.9 の MicroProfile Telemetry 2.0 で監視を簡素化 - OpenLiberty.io
-seo-description: MicroProfile Telemetry は、OpenTelemetry を使用してログ、メトリック、トレースを収集およびエクスポートすることで、Java アプリケーションの可観測性を標準化します。このリリースには、サードパーティのブラウザ クッキーを管理するためのソリューションと、バージョンレス機能コレクションへの新機能も含まれています。
-blog_description: MicroProfile Telemetry は、OpenTelemetry を使用してログ、メトリック、トレースを収集およびエクスポートすることで、Java アプリケーションの可観測性を標準化します。このリリースには、サードパーティのブラウザ クッキーを管理するためのソリューションと、バージョンレス機能コレクションへの新機能も含まれています。
+seo-description: MicroProfile Telemetry は、OpenTelemetry を使用してログ、メトリック、トレースを収集およびエクスポートすることで、Java アプリケーションの可観測性を標準化します。このリリースには、サードパーティのブラウザ Cookieを管理するためのソリューションと、バージョンレス機能コレクションへの新機能も含まれています。
+blog_description: MicroProfile Telemetry は、OpenTelemetry を使用してログ、メトリック、トレースを収集およびエクスポートすることで、Java アプリケーションの可観測性を標準化します。このリリースには、サードパーティのブラウザ Cookieを管理するためのソリューションと、バージョンレス機能コレクションへの新機能も含まれています。
 open-graph-image: https://openliberty.io/img/twitter_card.jpg
 open-graph-image-alt: Open Liberty Logo
 additional_authors:
@@ -27,7 +27,7 @@ David Mueller <https://github.com/dmuelle>
 //Blank line here is necessary before starting the body of the post.
 
 
-このリリースでは、MicroProfile Telemetry は、OpenTelemetry を使用してログ、メトリック、トレースを収集およびエクスポートすることで、Java アプリケーションの可観測性を標準化します。また、このリリースには、サードパーティのブラウザ クッキーを管理するためのソリューションと、バージョンレス機能コレクションへの新機能も含まれています。
+このリリースでは、MicroProfile Telemetry は、OpenTelemetry を使用してログ、メトリック、トレースを収集およびエクスポートすることで、Java アプリケーションの可観測性を標準化します。また、このリリースには、サードパーティのブラウザ Cookieを管理するためのソリューションと、バージョンレス機能コレクションへの新機能も含まれています。
 
 
 link:{url-about}[Open Liberty] 24.0.0.9では下記のアップデートが追加されました。
@@ -106,7 +106,7 @@ image::img/blog/blog_btn_stack_ja.svg[Ask a question on Stack Overflow, align="c
 
 MicroProfile Telemetryを使用して、標準化された方法でメトリクス、ログ、トレースを管理する方法については、link:{url-prefix}/docs/latest/microprofile-telemetry.html[Enable observability with MicroProfile Telemetry] を参照してください。
 
-MicroProfile Telemetry 2.0は最新のOpenTelemetryテクノロジーを提供します。link:{url-prefix}/docs/latest/microprofile-telemetry.html[分散トレース] に加えて、この機能はOpenTelemetryを使用してメトリクスとログを収集およびエクスポートできるようになりました。 管理に関する情報 <<metrics, metrics>> と <<logs, logs>> MicroProfile Telemetry を使用する場合は、次のセクションを参照してください。
+MicroProfile Telemetry 2.0は最新のOpenTelemetryテクノロジーを提供します。link:{url-prefix}/docs/latest/microprofile-telemetry.html[分散トレース] に加えて、この機能はOpenTelemetryを使用してメトリクスとログを収集およびエクスポートできるようになりました。 MicroProfile Telemetry を使用した<<metrics, メトリック>> と <<logs, ログ>> の管理については、次のセクションを参照してください。
 
 // DO NOT MODIFY THIS LINE. </GHA-BLOG-TOPIC>
 
@@ -211,7 +211,7 @@ MicroProfile Telemetry 2.0 機能を有効にしてすべてのログを収集�
 
 
 
-プライバシーを向上させ追跡を減らすために、link:https://developers.google.com/privacy-sandbox/3pcd/[Google Chromeは2025年にサードパーティクッキーを段階的に廃止すると発表しました]。その後、2024年7月22日時点で、link:https://privacysandbox.com/news/privacy-sandbox-update/[Chromeは規制上の懸念から段階的廃止計画を撤回する可能性があると述べました]。代わりに、ユーザーはブラウザでサードパーティクッキーをブロックするオプションを選択できるようになります。サードパーティクッキーを前提に設計されたサイトの一部は、サードパーティクッキーのブロックを選択するブラウザによって正しく動作しなくなることがあります。Chromeは、サイトが影響を受けているかどうかをテストするためのlink:https://developers.google.com/privacy-sandbox/3pcd/prepare/test-for-breakage[ドキュメント]を提供しています。この変更を緩和するためのオプションの1つとして、CHIPS（独立したパーティション状態を持つクッキー）という手法があります。
+プライバシーを向上させ追跡を減らすために、link:https://developers.google.com/privacy-sandbox/3pcd/[Google Chromeは2025年にサードパーティCookieを段階的に廃止すると発表しました]。その後、2024年7月22日時点で、link:https://privacysandbox.com/news/privacy-sandbox-update/[Chromeは規制上の懸念から段階的廃止計画を撤回する可能性があると述べました]。代わりに、ユーザーはブラウザでサードパーティCookieをブロックするオプションを選択できるようになります。サードパーティCookieを前提に設計されたサイトの一部は、サードパーティCookieのブロックを選択するブラウザによって正しく動作しなくなることがあります。Chromeは、サイトが影響を受けているかどうかをテストするためのlink:https://developers.google.com/privacy-sandbox/3pcd/prepare/test-for-breakage[ドキュメント]を提供しています。この変更を緩和するためのオプションの1つとして、CHIPS（独立したパーティション状態を持つCookie）という手法があります。
 
 
 
@@ -232,14 +232,14 @@ image::/img/blog/cookie2.png[partitioned cookie diagram,width=70%,align="center"
 
 `Partitioned` 属性を宣言するために使用する構成に応じて、Liberty は 3 つの属性のいずれかを使用します。
 
-次の例は、`server.xml` ファイルの `httpSession` 属性で HTTP セッション クッキーの `cookiePartitioned` 属性を設定する方法を示しています。
+次の例は、`server.xml` ファイルの `httpSession` 属性で HTTP セッション Cookieの `cookiePartitioned` 属性を設定する方法を示しています。
 
 [source,xml]
 ----
 <httpSession cookieSameSite="None" cookiePartitioned="defer|true|false"/>`
 ----
 
-次の例は、`server.xml` ファイルの `webAppSecurity` 属性で LTPA および JWT セキュリティ クッキーの `partitionedCookie` 属性を設定する方法を示しています。
+次の例は、`server.xml` ファイルの `webAppSecurity` 属性で LTPA および JWT セキュリティ Cookieの `partitionedCookie` 属性を設定する方法を示しています。
 
 [source,xml]
 ----
@@ -283,7 +283,7 @@ image::/img/blog/cookie2.png[partitioned cookie diagram,width=70%,align="center"
 - `jpaContainer` / `persistenceContainer`
 - `jsfContainer` / `facesContainer`
 - `jsonbContainer`
-- `jsonpコンテナ`
+- `jsonpContainer`
 
 次の `server.xml` 構成ファイルは、バージョンレス機能 `jpaContainer`、`jsfContainer`、`jsonbContainer`、および `jsonpContainer` を備えた Java EE プラットフォーム `javaee-8.0` を使用します。
 
