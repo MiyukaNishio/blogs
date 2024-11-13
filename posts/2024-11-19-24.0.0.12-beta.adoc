@@ -6,8 +6,8 @@ categories: blog
 author_picture: https://avatars3.githubusercontent.com/dmuelle
 author_github: https://github.com/dmuelle
 seo-title: Enhanced message validation for XML Web Services in 24.0.0.12-beta - OpenLiberty.io
-seo-description: The 24.0.0.12-beta release enhances inbound SOAP message validation in XML Web Services to simplify message debugging and make your web services and clients more resilient during updates.
-blog_description: The 24.0.0.12-beta release enhances inbound SOAP message validation in XML Web Services to simplify message debugging and make your web services and clients more resilient during updates.
+seo-description: The 24.0.0.12-beta release enhances inbound SOAP message validation in XML Web Services to simplify message debugging and make your web services and clients more resilient.
+blog_description: The 24.0.0.12-beta release enhances inbound SOAP message validation in XML Web Services to simplify message debugging and make your web services and clients more resilient.
 open-graph-image: https://openliberty.io/img/twitter_card.jpg
 open-graph-image-alt: Open Liberty Logo
 ---
@@ -17,7 +17,7 @@ David Mueller <https://github.com/dmuelle>
 :url-prefix:
 :url-about: /
 
-The 24.0.0.12-beta release enhances inbound SOAP message validation in XML Web Services to simplify message debugging and make your web services and clients more resilient during updates.
+The 24.0.0.12-beta release enhances inbound SOAP message validation in XML Web Services to simplify message debugging and make your web services and clients more resilient.
 
 
 See also link:{url-prefix}/blog/?search=beta&key=tag[previous Open Liberty beta blog posts].
@@ -29,7 +29,19 @@ See also link:{url-prefix}/blog/?search=beta&key=tag[previous Open Liberty beta 
 [#xmlws]
 == Fine-tuning XML Web Services inbound SOAP message validation
 
-XML Web Services features on Open Liberty now support fine-tuned message validation for inbound SOAP messages. XML Web Services provide various options for message validation. In 24.0.0.12-beta, Open Liberty introduces `server.xml` configuration attributes to support these options. These attributes for the `webService` and `webServiceClient` element allow you to enable full XML schema validation, enable or disable XML binding (JAXB) default validation, or to use default validation while ignoring only `UnmarshallExceptions: Unknown Element` errors.
+Open Liberty's XML Web Services features now support fine-grained message validation for inbound SOAP messages. This enhancement provides more control over message validation options.
+In Open Liberty 24.0.0.12-beta, you can configure message validation using new attributes in the `server.xml` file. These attributes are available for the `webService` and `webServiceClient` elements.
+
+
+[options="header"]
+|=======================
+| Attribute | Description
+| `enableSchemaValidation` | Enable full validation against the XML schema
+| `enableDefaultValidation` | Enable or disable default validation for JAXB
+| `ignoreUnexpectedElements` | Use default validation while ignoring `UnmarshallExceptions: Unknown Element` errors
+|=======================
+
+By using these attributes, you can tailor message validation to your specific needs and improve the security and reliability of your SOAP-based web services.
 
 These attributes require the one of the following XML Web Services features to be enabled in your `server.xml` file:
 
@@ -76,7 +88,7 @@ The `Client Service Name` is the name of your XML Web Service client. This name 
 <webServiceClient serviceName="SayHelloService"  enableSchemaValidation="true" />
 ----
 
-The following example shows how to enable XML schema validation for a particular web service by usingnthe webservice port:
+The following example shows how to enable XML schema validation for a particular web service by using the web service port:
 
 [source,xml]
 ----
