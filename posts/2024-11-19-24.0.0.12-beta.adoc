@@ -59,6 +59,8 @@ The examples in the following sections show how to enable each option. To disabl
 
 You can set the `enableSchemaValidation=true` attribute to provide more insight into JAXB unmarshalling exceptions and make painful message debugging easier. This option is the highest level of XML validation, which provides faster debugging and the most thorough checks on inbound message contents. But it comes with a tradeoff: higher performance cost.
 
+==== Global XML schema validation
+
 The following example shows how to enable XML schema validation for web services globally for your Open Liberty runtime:
 
 [source,xml]
@@ -73,22 +75,7 @@ To enable XML schema validation globally for web service clients, set the same a
 <webServiceClient enableSchemaValidation="true" />
 ----
 
-
-The following example shows how to enable XML schema validation for a specific client service:
-
-[source,xml]
-----
-<webServiceClient serviceName="<client service name>"  enableSchemaValidation="true" />
-----
-
-The `Client Service Name` is the name of your XML Web Service client. This name comes from your `@WebServiceClient(serviceName=<client service name>` annotated stub class for managed clients.
-
-For unmanaged clients, you can check the `<wsdl:service name="<client service name>"` line in your WSDL file. For example, if the name of your client is `SayHelloService`, set the matching `serviceName` similar to the following example:
-
-[source,xml]
-----
-<webServiceClient serviceName="SayHelloService"  enableSchemaValidation="true" />
-----
+==== Targeted XML schema validation
 
 The following example shows how to enable XML schema validation for a particular web service by using the web service port:
 
@@ -99,18 +86,29 @@ The following example shows how to enable XML schema validation for a particular
 
 The `web service port name` is the port name of the individual web service implementation.  This name comes from your `@WebService(portName=<web service port name>` annotated class.
 
-Alternatively, you can check the `<wsdl:port ... name="Web Service Port Name">` line in your WSDL file for the port name. For example, if the name of your port name is `SimpleEchoPort`, set the matching `portName` attribute similar to the following example:
+Alternatively, you can check the `<wsdl:port ... name="Web Service Port Name">` line in your WSDL file for the port name.
+
+
+The following example shows how to enable XML schema validation for a specific client service:
 
 [source,xml]
 ----
-<webService portName="SimpleEchoPort"  enableSchemaValidation="true" />
+<webServiceClient serviceName="<client service name>"  enableSchemaValidation="true" />
 ----
+
+The `Client Service Name` is the name of your XML Web Service client. This name comes from your `@WebServiceClient(serviceName=<client service name>` annotated stub class for managed clients.
+
+For unmanaged clients, you can check the `<wsdl:service name="<client service name>"` line in your WSDL file.
+
+
 
 === Default validation
 
 You can now configure the default JAXB validation of inbound SOAP Messages with the `enableDefaultValidation=true` attribute. Depending on whether your application is an XML Web Services client or web service, Open Liberty either enables or disables default validation. Default validation is much more efficient than XML schema validation, so enabling it provides basic message validation with lower overhead. Disabling it lets you ignore various unmarshalling errors for problematic messages.
 
-The following example shows how to enable default validation globally for your Open Liberty runtime:
+==== Global default validation
+
+The following example shows how to enable default validation globally for web services in your Open Liberty runtime:
 
 [source,xml]
 ----
@@ -118,6 +116,8 @@ The following example shows how to enable default validation globally for your O
 ----
 
 To enable default validation globally for web service clients, set the same attribute on the `webServiceClient` element.
+
+==== Targeted default validation
 
 The following example shows how to enable default validation for a specific web service:
 
@@ -132,6 +132,8 @@ To enable default validation for a specific web service client, set the same att
 
 WebSphere Application Server traditional provides the `com.ibm.ws.webservices.ignoreUnknownElements=true` JVM property to configure the runtime to ignore all unknown elements during JAXB unmarshalling. The new Open Liberty `ignoreUnexpectedElements` attribute provides the same function. Inbound SOAP messages often contain extra elements in the SOAP body when a web service is updated but the client is not. When a message contains an unknown element, Open Liberty throws a `UnmarshallingException: Unknown Element`. By enabling `ignoreUnkownEllements`, you can keep validation enabled while ignoring unknown elements.
 
+==== Global configuration
+
 The following example shows how to ignore unexpected elements globally for web services on your Open Liberty runtime:
 
 [source,xml]
@@ -140,6 +142,8 @@ The following example shows how to ignore unexpected elements globally for web s
 ----
 
 To ignore unexpected elements globally for web service clients, set the same attribute on the `webServiceClient` element.
+
+==== Targeted configuration
 
 The following example shows how to ignore unexpected elements for a specific web service:
 
