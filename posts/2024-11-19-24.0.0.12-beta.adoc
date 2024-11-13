@@ -81,7 +81,9 @@ The following example shows how to enable XML schema validation for a specific c
 <webServiceClient serviceName="<client service name>"  enableSchemaValidation="true" />
 ----
 
-The `Client Service Name` is the name of your XML Web Service client. This name comes from your `@WebServiceClient(serviceName=<client service name>` annotated stub class for managed clients. For unmanaged clients, you can check the `<wsdl:service name="<client service name>"` line in your WSDL file. For example, if the name of your client is `SayHelloService`, set the matching `serviceName` similar to the following example:
+The `Client Service Name` is the name of your XML Web Service client. This name comes from your `@WebServiceClient(serviceName=<client service name>` annotated stub class for managed clients.
+
+For unmanaged clients, you can check the `<wsdl:service name="<client service name>"` line in your WSDL file. For example, if the name of your client is `SayHelloService`, set the matching `serviceName` similar to the following example:
 
 [source,xml]
 ----
@@ -95,7 +97,9 @@ The following example shows how to enable XML schema validation for a particular
 <webService portName="<web service port name>"  enableSchemaValidation="true" />
 ----
 
-The `web service port name` is the port name of the individual web service implementation.  This name comes from your `@WebService(portName=<web service port name>` annotated class. Alternatively, you can check the `<wsdl:port ... name="Web Service Port Name">` line in your WSDL file for the port name. For example, if the name of your port name is `SimpleEchoPort`, set the matching `portName` attribute similar to the following example:
+The `web service port name` is the port name of the individual web service implementation.  This name comes from your `@WebService(portName=<web service port name>` annotated class.
+
+Alternatively, you can check the `<wsdl:port ... name="Web Service Port Name">` line in your WSDL file for the port name. For example, if the name of your port name is `SimpleEchoPort`, set the matching `portName` attribute similar to the following example:
 
 [source,xml]
 ----
@@ -152,14 +156,6 @@ To ignore unexpected elements for a specific web service client, set the same at
 === Try it now
 
 To try out these features, update your build tools to pull the Open Liberty All Beta Features package instead of the main release. The beta works with Java SE 23, 21, 17, 11, and 8.
-// // // // // // // //
-// In the preceding section:
-// Check if a new non-LTS Java SE version is supported that needs to be added to the list (21, 17, 11, and 8 are LTS and will remain for a while)
-// https://openliberty.io/docs/latest/java-se.html
-//
-// In the following section:
-// Check if a new MicroProfile or Jakarta version is in beta that could replace the example values in the codeblock
-// // // // // // // //
 
 If you're using link:{url-prefix}/guides/maven-intro.html[Maven], you can install the All Beta Features package by using:
 
