@@ -102,7 +102,7 @@ For unmanaged clients, you can check the `<wsdl:service name="<client service na
 
 === Default validation
 
-You can configure the default level of JAXB validation of inbound SOAP Messages with the `enableDefaultValidation=true` attribute. Depending on whether your application is an XML Web Services client or web service, Open Liberty either enables or disables default validation. Default validation is much more efficient than XML schema validation, so enabling it provides basic message validation with lower overhead. Disabling it lets you ignore various unmarshalling errors for problematic messages.
+You can configure the default level of JAXB validation of inbound SOAP Messages with the `enableDefaultValidation=true` attribute. Depending on whether your application uses an XML Web Services client or web service or implementation, Open Liberty either enables or disables default validation. Default validation is much more efficient than XML schema validation, so enabling it provides basic message validation with lower overhead. Disabling it lets you ignore various unmarshalling errors for problematic messages.
 
 ==== Global default validation
 
