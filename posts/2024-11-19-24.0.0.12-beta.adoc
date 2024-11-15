@@ -84,7 +84,7 @@ The following example shows how to enable XML schema validation for a particular
 <webService portName="<web service port name>"  enableSchemaValidation="true" />
 ----
 
-Here `portName`'s value port name of the Web Service implementation you're configuring.  This name comes from your `@WebService(portName=<web service port name>` annotated class.
+The value of `portName` is the port name of the Web Service implementation you're configuring.  This name comes from your `@WebService(portName=<web service port name>` annotated class.
 Alternatively, you can check the `<wsdl:port ... name="Web Service Port Name">` line in your WSDL file for the port name.
 
 
