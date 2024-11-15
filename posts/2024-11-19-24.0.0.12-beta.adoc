@@ -95,7 +95,7 @@ The following example shows how to enable XML schema validation for a specific c
 <webServiceClient serviceName="<client service name>"  enableSchemaValidation="true" />
 ----
 
-Here `serviceName`'s value is the name of the Web Service Client you're are configuring. This name comes from your `@WebServiceClient(serviceName=<client service name>` annotated stub class for managed clients.
+The value of `serviceName` is the name of the Web Service Client you're configuring. This name comes from your `@WebServiceClient(serviceName=<client service name>` annotated stub class for managed clients.
 For unmanaged clients, you can check the `<wsdl:service name="<client service name>"` line in your WSDL file.
 
 
