@@ -41,6 +41,8 @@ In Open Liberty 24.0.0.12-beta, you can configure message validation using new a
 | `ignoreUnexpectedElements` | Use default validation while ignoring `UnmarshallExceptions: Unknown Element` errors
 |=======================
 
+The default value for all three attributes is `false`, except for `enableDefaultValidation` for web service clients, which defaults to `true`.
+
 By using these attributes, you can tailor message validation to your specific needs and improve the security and reliability of your SOAP-based web services.
 
 These attributes require the one of the following XML Web Services features to be enabled in your `server.xml` file:
@@ -53,7 +55,8 @@ These attributes require the one of the following XML Web Services features to b
 
 You can apply the configuration to web services (`webService`) or web service clients (`webServiceClient`), either globally, or to an individual client or web service implementation.
 
-The examples in the following sections show how to enable each option. To disable any of these options, set the corresponding attributes to `false`.
+
+
 
 === XML schema validation
 
@@ -102,7 +105,7 @@ For unmanaged clients, you can check the `<wsdl:service name="<client service na
 
 === Default validation
 
-You can configure the default level of JAXB validation of inbound SOAP Messages with the `enableDefaultValidation=true` attribute. Depending on whether your application uses an XML Web Services client or web service implementation, Open Liberty either enables or disables default validation. Default validation is much more efficient than XML schema validation, so enabling it provides basic message validation with lower overhead. Disabling it lets you ignore various unmarshalling errors for problematic messages.
+You can configure the default level of JAXB validation of inbound SOAP Messages with the `enableDefaultValidation=true` attribute. Default validation is much more efficient than XML schema validation, so enabling it provides basic message validation with lower overhead. Disabling it lets you ignore various unmarshalling errors for problematic messages. Default validation is enabled by default for web services, but disabled for web service clients.
 
 ==== Global default validation
 
@@ -113,7 +116,12 @@ The following example shows how to enable default validation globally for web se
 <webService enableDefaultValidation="true"/>
 ----
 
-To enable default validation globally for web service clients, set the same attribute on the `webServiceClient` element.
+Default validation is enabled by default for web service clients. To disable default validation globally for web service clients, set the `enableDefaultValidation="true"` attribute on the `webServiceClient` element.
+
+[source,xml]
+----
+<webServiceCLient enableDefaultValidation="false"/>
+----
 
 ==== Targeted default validation
 
@@ -124,7 +132,7 @@ The following example shows how to enable default validation for a specific web 
 <webService  portName="SayHelloService" enableDefaultValidation="true"/>
 ----
 
-To enable default validation for a specific web service client, set the `enableDefaultValidation` attribute on the `webServiceClient`element and use the `serviceName` attribute to specify the client service.
+Default validation is enabled by default for web service clients. To disable default validation for a specific web service client, set the `enableDefaultValidation="true"` attribute on the `webServiceClient` element and use the `serviceName` attribute to specify the client service.
 
 === Ignore unexpected elements
 
