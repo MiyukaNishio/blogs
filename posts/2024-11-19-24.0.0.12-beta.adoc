@@ -43,17 +43,13 @@ In Open Liberty 24.0.0.12-beta, you can configure message validation using new a
 
 The default value for all three attributes is `false`, except for `enableDefaultValidation` for web service clients, which defaults to `true`.
 
-By using these attributes, you can tailor message validation to your specific needs and improve the security and reliability of your SOAP-based web services.
-
 These attributes require the one of the following XML Web Services features to be enabled in your `server.xml` file:
 
-* xref:{url-prefix}/docs/latest/reference/feature/xmlWS-4.0.html[Jakarta XML Web Services
-4.0] (`xmlWS-4.0`)
-* xref:{url-prefix}/docs/latest/reference/feature/xmlWS-3.0.html[Jakarta XML Web Services
-4.0] (`xmlWS-3.0`)
-* xref:{url-prefix}/docs/latest/reference/feature/jaxws-2.2.html[Java Web Services] (`jaxws-2.2`)
+* xref:{url-prefix}/docs/latest/reference/feature/xmlWS-4.0.html[Jakarta XML Web Services 4.0] (`xmlWS-4.0`)
+* xref:{url-prefix}/docs/latest/reference/feature/xmlWS-3.0.html[Jakarta XML Web Services 4.0] (`xmlWS-3.0`)
+* xref:{url-prefix}/docs/latest/reference/feature/jaxws-2.2.html[Java Web Services 2.2] (`jaxws-2.2`)
 
-You can apply the configuration to web services (`webService`) or web service clients (`webServiceClient`), either globally, or to an individual client or web service implementation.
+By using these attributes, you can tailor message validation to your specific needs and improve the security and reliability of your SOAP-based web services. You can apply the configuration to web services (`webService`) or web service clients (`webServiceClient`), either globally, or to an individual client or web service implementation.
 
 
 
