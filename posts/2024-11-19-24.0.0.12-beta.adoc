@@ -51,9 +51,6 @@ These attributes require the one of the following XML Web Services features to b
 
 By using these attributes, you can tailor message validation to your specific needs and improve the security and reliability of your SOAP-based web services. You can apply the configuration to web services (`webService`) or web service clients (`webServiceClient`), either globally, or to an individual client or web service implementation.
 
-
-
-
 === XML schema validation
 
 You can set the `enableSchemaValidation=true` attribute to provide more insight into JAXB unmarshalling exceptions and make painful message debugging easier. This option is the highest level of XML validation, which provides faster debugging and the most thorough checks on inbound message contents. But it comes with a tradeoff: higher performance cost.
@@ -112,11 +109,11 @@ The following example shows how to enable default validation globally for web se
 <webService enableDefaultValidation="true"/>
 ----
 
-Default validation is enabled by default for web service clients. To disable default validation globally for web service clients, set the `enableDefaultValidation="true"` attribute on the `webServiceClient` element.
+Default validation is enabled by default for web service clients. To disable default validation globally for web service clients, set the `enableDefaultValidation="false"` attribute on the `webServiceClient` element.
 
 [source,xml]
 ----
-<webServiceCLient enableDefaultValidation="false"/>
+<webServiceClient enableDefaultValidation="false"/>
 ----
 
 ==== Targeted default validation
@@ -128,7 +125,7 @@ The following example shows how to enable default validation for a specific web 
 <webService  portName="SayHelloService" enableDefaultValidation="true"/>
 ----
 
-Default validation is enabled by default for web service clients. To disable default validation for a specific web service client, set the `enableDefaultValidation="true"` attribute on the `webServiceClient` element and use the `serviceName` attribute to specify the client service.
+Default validation is enabled by default for web service clients. To disable default validation for a specific web service client, set the `enableDefaultValidation="false"` attribute on the `webServiceClient` element and use the `serviceName` attribute to specify the client service.
 
 [source,xml]
 ----
