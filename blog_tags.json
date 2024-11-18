@@ -2,7 +2,7 @@
     "blog_tags": [
         {
             "name": "announcements",
-            "posts": ["24.0.0.11",
+            "posts": ["24.0.0.12-beta", "24.0.0.11",
                       "24.0.0.11-beta", "24.0.0.10",
                       "24.0.0.10-beta", "24.0.0.9",
                       "24.0.0.9-beta", "liberty-developer-essentials-badge",
@@ -172,7 +172,8 @@
         },
         {
             "name": "release",
-            "posts": ["24.0.0.11", "24.0.0.11-beta",
+            "posts": ["24.0.0.12-beta",
+                      "24.0.0.11", "24.0.0.11-beta",
                       "24.0.0.10", "24.0.0.10-beta",
                       "24.0.0.9", "24.0.0.9-beta",
                       "24.0.0.8", "24.0.0.8-beta",
@@ -236,7 +237,7 @@
         },
         {
             "name": "beta",
-            "posts": ["24.0.0.11-beta",
+            "posts": ["24.0.0.12-beta", "24.0.0.11-beta",
                       "24.0.0.10-beta", "24.0.0.9-beta",
                       "24.0.0.8-beta", "24.0.0.7-beta",
                       "24.0.0.6-beta", "24.0.0.5-beta",
@@ -375,7 +376,7 @@
         },
         {
             "name": "jakarta-ee",
-            "posts": ["rethinking-microservices",
+            "posts": ["24.0.0.12-beta", "rethinking-microservices",
                       "24.0.0.8", "liberty-developer-essentials-badge",
                       "24.0.0.8-beta", "24.0.0.7-beta",
                       "24.0.0.6-beta", "simplifying-nosql-database-integration-with-jakarta-nosql",
