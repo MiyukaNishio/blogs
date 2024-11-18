@@ -134,6 +134,11 @@ The following example shows how to enable default validation for a specific web 
 
 Default validation is enabled by default for web service clients. To disable default validation for a specific web service client, set the `enableDefaultValidation="true"` attribute on the `webServiceClient` element and use the `serviceName` attribute to specify the client service.
 
+[source,xml]
+----
+<webServiceClient serviceName="<client service name>"  enableDefaultValidation="false" />
+----
+
 === Ignore unexpected elements
 
 The new Open Liberty `ignoreUnexpectedElements` attribute provides the same function. Inbound SOAP messages often contain extra elements in the SOAP body when a web service is updated but the client is not. When a message contains an unknown element, Open Liberty throws a `UnmarshallingException: Unknown Element`. By enabling `ignoreUnkownEllements`, you can keep validation enabled while ignoring unknown elements.
