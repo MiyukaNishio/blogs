@@ -41,9 +41,9 @@ In Open Liberty 24.0.0.12-beta, you can configure message validation using new a
 | `ignoreUnexpectedElements` | Use default validation while ignoring `UnmarshallExceptions: Unknown Element` errors
 |=======================
 
-The default value for all three attributes is `false`, except for `enableDefaultValidation` for web service clients, which defaults to `true`.
+The default value for `enableDefaultValidation` in the `webServiceClient` element is `true`. The rest of the attributes default to `false` in both the `webServiceClient` and `webService` elements.
 
-These attributes require the one of the following XML Web Services features to be enabled in your `server.xml` file:
+These attributes require one of the following XML Web Services features to be enabled in your `server.xml` file:
 
 * xref:{url-prefix}/docs/latest/reference/feature/xmlWS-4.0.html[Jakarta XML Web Services 4.0] (`xmlWS-4.0`)
 * xref:{url-prefix}/docs/latest/reference/feature/xmlWS-3.0.html[Jakarta XML Web Services 4.0] (`xmlWS-3.0`)
@@ -134,7 +134,7 @@ Default validation is enabled by default for web service clients. To disable def
 
 === Ignore unexpected elements
 
-The new Open Liberty `ignoreUnexpectedElements` attribute provides the same function. Inbound SOAP messages often contain extra elements in the SOAP body when a web service is updated but the client is not. When a message contains an unknown element, Open Liberty throws a `UnmarshallingException: Unknown Element`. By enabling `ignoreUnkownEllements`, you can keep validation enabled while ignoring unknown elements.
+Inbound SOAP messages often contain extra elements in the SOAP body when a web service is updated but the client is not. When a message contains an unknown element, Open Liberty throws a `UnmarshallingException: Unknown Element`. By enabling `ignoreUnexpectedElements`, you can keep validation enabled while ignoring unknown elements.
 
 ==== Global configuration
 
@@ -156,7 +156,7 @@ The following example shows how to ignore unexpected elements for a specific web
 <webService  portName="SayHelloService" ignoreUnexpectedElements="true"/>
 ----
 
-To ignore unexpected elements for a specific web service client, set the same attribute on the `webServiceClient`element and use the `serviceName` attribute to specify the client service.
+To ignore unexpected elements for a specific web service client, set the same attribute on the `webServiceClient` element and use the `serviceName` attribute to specify the client service.
 
 // DO NOT MODIFY THIS LINE. </GHA-BLOG-TOPIC>
 
