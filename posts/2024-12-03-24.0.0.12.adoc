@@ -41,7 +41,7 @@ David Mueller <https://github.com/dmuelle>
 // [.img_border_light]
 // image::img/blog/FILE_NAME[IMAGE CAPTION ,width=70%,align="center"]
 // -------------------------
-// "[.img_border_light]" = This adds a faint grey border around the image to make its edges sharper. Use it around screenshots but not           
+// "[.img_border_light]" = This adds a faint grey border around the image to make its edges sharper. Use it around screenshots but not
 // around diagrams. Then double check how it looks.
 // There is also a "[.img_border_dark]" class which tends to work best with screenshots that are taken on dark
 // backgrounds.
@@ -83,9 +83,9 @@ Along with the new features and functions added to the runtime, we’ve also mad
 // In the preceding section:
 // Replace the TAG_X with a short label for the feature in lower-case, eg: mp3
 // Replace the FEATURE_1_HEADING with heading the feature section, eg: MicroProfile 3.3
-// Where the updates are grouped as sub-headings under a single heading 
-//   (eg all the features in a MicroProfile release), provide sub-entries in the list; 
-//   eg replace SUB_TAG_1 with mpr, and SUB_FEATURE_1_HEADING with 
+// Where the updates are grouped as sub-headings under a single heading
+//   (eg all the features in a MicroProfile release), provide sub-entries in the list;
+//   eg replace SUB_TAG_1 with mpr, and SUB_FEATURE_1_HEADING with
 //   Easily determine HTTP headers on outgoing requests (MicroProfile Rest Client 1.4)
 // // // // // // // //
 
@@ -101,7 +101,7 @@ Check out link:{url-prefix}/blog/?search=release&search!=beta[previous Open Libe
 //
 // OpenLiberty.io site links:
 // link:{url-prefix}/guides/maven-intro.html[Maven]
-// 
+//
 // Off-site links:
 //link:https://openapi-generator.tech/docs/installation#jar[Download Instructions]
 //
@@ -155,62 +155,58 @@ FROM icr.io/appcafe/open-liberty
 
 Or take a look at our link:{url-prefix}/start/[Downloads page].
 
-If you're using link:https://plugins.jetbrains.com/plugin/14856-liberty-tools[IntelliJ IDEA], link:https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext[Visual Studio Code] or link:https://marketplace.eclipse.org/content/liberty-tools[Eclipse IDE], you can also take advantage of our open source link:https://openliberty.io/docs/latest/develop-liberty-tools.html[Liberty developer tools] to enable effective development, testing, debugging and application management all from within your IDE. 
+If you're using link:https://plugins.jetbrains.com/plugin/14856-liberty-tools[IntelliJ IDEA], link:https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext[Visual Studio Code] or link:https://marketplace.eclipse.org/content/liberty-tools[Eclipse IDE], you can also take advantage of our open source link:https://openliberty.io/docs/latest/develop-liberty-tools.html[Liberty developer tools] to enable effective development, testing, debugging and application management all from within your IDE.
 
 [link=https://stackoverflow.com/tags/open-liberty]
 image::img/blog/blog_btn_stack.svg[Ask a question on Stack Overflow, align="center"]
 
-// // // // DO NOT MODIFY THIS COMMENT BLOCK <GHA-BLOG-TOPIC> // // // // 
+// // // // DO NOT MODIFY THIS COMMENT BLOCK <GHA-BLOG-TOPIC> // // // //
 // Blog issue: https://github.com/OpenLiberty/open-liberty/issues/30263
 // Contact/Reviewer: jim-krueger
-// // // // // // // // 
+// // // // // // // //
 [#SUB_TAG_0]
-== MicroProfile Rest Client 4.0
+== Align your REST client with Jakarta RESTful Web Services with MicroProfile Rest Client 4.0
 
-Please provide a summary of the update, including the following points:
-   
-   - A sentence or two that introduces the update to someone new to the general technology/concept.
-   - The Human-readable name and short feature name for your feature- eg WebSockets feature (websockets-1.0).
-   - Who is the target persona? Who do you expect to use the update? eg application developer, operations. 
-   - What was the problem before and how does your update make their life better? (Why should they care?)
-   - Briefly explain how to make your update work. Include screenshots, diagrams, and/or code snippets, and provide a `server.xml` snippet.  
-   - Where can they find out more about this specific update (eg Open Liberty docs, Javadoc) and/or the wider technology?  
-    
-    
+MicroProfile Rest Client provides a type-safe approach to invoke RESTful services over HTTP. As much as possible, the MicroProfile Rest Client 4.0 release attempts to use link:https://jakarta.ee/specifications/restful-ws/3.1/[Jakarta RESTful Web Services 3.1] APIs for consistency and easier re-use.
+
+The MicroProfile Rest Client 4.0 feature (`mpRestClient-4.0`) aligns with Jakarta RESTful Web Services 3.1 as part of the greater effort to align MicroProfile 7.0 with Jakarta EE10. The beta release of this feature includes the following updates:
+
+* Added a new `RestClientBuilder.header(String, Object)` method to add dynamic headers to the request.
+* Added a new `RestClientBuilder.baseUri(String)` overload method so users don't have to call `URI.create(String)`.
+* Added clarification in the spec on how to use Jakarta RESTful Web Services `EntityPart` API for multipart requests.
+
+=== Learn more
+
+For more information, see the following resources:
+
+* link:https://github.com/eclipse/microprofile-rest-client[Rest Client for MicroProfile] on GitHub
+* link:https://download.eclipse.org/microprofile/microprofile-rest-client-4.0-RC2/microprofile-rest-client-spec-4.0-RC2.html[Rest Client for MicroProfile 4.0 RC2 specification document]
+* link:http://download.eclipse.org/microprofile/microprofile-rest-client-4.0-RC2/apidocs/[API Javadoc]
 
 
-   
-// DO NOT MODIFY THIS LINE. </GHA-BLOG-TOPIC> 
 
-// // // // DO NOT MODIFY THIS COMMENT BLOCK <GHA-BLOG-TOPIC> // // // // 
+
+// DO NOT MODIFY THIS LINE. </GHA-BLOG-TOPIC>
+
+// // // // DO NOT MODIFY THIS COMMENT BLOCK <GHA-BLOG-TOPIC> // // // //
 // Blog issue: https://github.com/OpenLiberty/open-liberty/issues/30255
 // Contact/Reviewer: volosied,pnicolucci
-// // // // // // // // 
+// // // // // // // //
 [#SUB_TAG_1]
-== SameSite=None for Incompatible Clients
+== Check for Samesite=None incompatible clients
 
-Please provide a summary of the update, including the following points:
-   
-   - A sentence or two that introduces the update to someone new to the general technology/concept.
-   - The Human-readable name and short feature name for your feature- eg WebSockets feature (websockets-1.0).
-   - Who is the target persona? Who do you expect to use the update? eg application developer, operations. 
-   - What was the problem before and how does your update make their life better? (Why should they care?)
-   - Briefly explain how to make your update work. Include screenshots, diagrams, and/or code snippets, and provide a `server.xml` snippet.  
-   - Where can they find out more about this specific update (eg Open Liberty docs, Javadoc) and/or the wider technology?  
-    
-    
+In 24.0.0.10-beta, you can now use `SameSite=None` cookies without the worry of breaking certain client versions. Previously, cookies with the `SameSite=None` attribute were rejected or mishandled (treated as `SameSite=Strict`) if they were sent to an link:https://www.chromium.org/updates/same-site/incompatible-clients/[incompatible client version]. Now, Open Liberty intercepts cookies with the `SameSite=None` attribute before they are sent to the web browser and checks if the `User-Agent` specifies an incompatible client version. If an incompatible client is detected, the `SameSite=None` and `Partitioned` headers (if present) are removed from the cookie.
 
+For more information, see link:{url-prefix}/blog/2020/03/25/set-samesite-attribute-cookies-liberty.html[Setting the SameSite attribute on cookies with Open Liberty].
+// DO NOT MODIFY THIS LINE. </GHA-BLOG-TOPIC>
 
-   
-// DO NOT MODIFY THIS LINE. </GHA-BLOG-TOPIC> 
-
-// // // // DO NOT MODIFY THIS COMMENT BLOCK <GHA-BLOG-TOPIC> // // // // 
+// // // // DO NOT MODIFY THIS COMMENT BLOCK <GHA-BLOG-TOPIC> // // // //
 // Blog issue: https://github.com/OpenLiberty/open-liberty/issues/30139
 // Contact/Reviewer: Azquelt
-// // // // // // // // 
+// // // // // // // //
 [#SUB_TAG_2]
 == MicroProfile OpenAPI 4.0
-    
+
 
 link:https://www.openapis.org/[OpenAPI] is a standardised way of documenting REST APIs in a JSON or YAML format. MicroProfile OpenAPI helps you generate and serve OpenAPI documentation for your REST applications built using JAX-RS or Jakarta Restful Web Services. This can be useful for developers to test out the API during development, or for people using the API in production.
 
@@ -227,30 +223,33 @@ A detailed list of changes can be found in the [release notes of the specificati
 
 Although the OpenAPI 3.1 format is now the default, you can still configure `mpOpenAPI-4.0` to output in OpenAPI 3.0 format by configuring `openAPIVersion` in server.xml:
 
-```xml
+[source.xml]
+----
 <mpOpenAPI openAPIVersion="3.0" />
-```
+----
 
 Additionally, this release will include all deployed applications in the OpenAPI documentation by default. If you need more control over which applications are documented, there's new server.xml configuration to include or exclude specific applications and modules and to specify the `info` section of the OpenAPI document.
 
-```xml
+[source.xml]
+----
 <mpOpenAPI>
     <excludeApplication>HiddenApplication</excludeApplication>
     <excludeModule>myApp/adminModule</excludeModule>
     <info version="1.5"
           title="Foo API" />
 </mpOpenAPI>
-```
+----
 
 More information on these options is available in the [reference documentation][config-doc].
 
 To start using the MicroProfile OpenAPI 4.0 feature, enable it in your server.xml and deploy one or more applications developed using Jakarta RESTful Web Services:
 
-```xml
+[source.xml]
+----
 <featureManager>
     <feature>mpOpenAPI-4.0</feature>
 </featureManager>
-```
+----
 
 Then you can view the generated OpenAPI document. On a local development server this will be at `http://localhost:9080/openapi` and a UI is available to view the documentation in a more human-readable way at `http://localhost:9080/openapi/ui`.
 
@@ -267,30 +266,72 @@ Further resources:
 [guide]: https://openliberty.io/guides/microprofile-openapi.html
 [config-doc]: https://openliberty.io/docs/latest/reference/config/mpOpenAPI.html
 
-   
-// DO NOT MODIFY THIS LINE. </GHA-BLOG-TOPIC> 
 
-// // // // DO NOT MODIFY THIS COMMENT BLOCK <GHA-BLOG-TOPIC> // // // // 
+// DO NOT MODIFY THIS LINE. </GHA-BLOG-TOPIC>
+
+// // // // DO NOT MODIFY THIS COMMENT BLOCK <GHA-BLOG-TOPIC> // // // //
 // Blog issue: https://github.com/OpenLiberty/open-liberty/issues/29861
 // Contact/Reviewer: benjamin-confino
-// // // // // // // // 
+// // // // // // // //
 [#SUB_TAG_3]
-== Fault Tolerance 4.1
+== Integrate fault tolerance and OpenTelemetry with MicroProfile Fault Tolerance 4.1
 
-Please provide a summary of the update, including the following points:
-   
-   - A sentence or two that introduces the update to someone new to the general technology/concept.
-   - The Human-readable name and short feature name for your feature- eg WebSockets feature (websockets-1.0).
-   - Who is the target persona? Who do you expect to use the update? eg application developer, operations. 
-   - What was the problem before and how does your update make their life better? (Why should they care?)
-   - Briefly explain how to make your update work. Include screenshots, diagrams, and/or code snippets, and provide a `server.xml` snippet.  
-   - Where can they find out more about this specific update (eg Open Liberty docs, Javadoc) and/or the wider technology?  
-    
-    
+link:{url-prefix}/docs/latest/fault-tolerance.html[MicroProfile Fault Tolerance] helps you easily identify and mitigate failures in your code. It provides annotations that you can add to methods to use bulkhead, circuit breaker, retry, timeout, and fallback strategies.
 
+The new `mpFaultTolerance-4.1` feature integrates with the `mpTelemetry-2.0` feature, so that Fault Tolerance can export metric data to OpenTelemetry. With this change, and other changes in `mpTelemetry-2.0`, you can simplify the configuration and management of your application observability by using OpenTelemetry as the single source for logging, metrics, and tracing.
 
-   
-// DO NOT MODIFY THIS LINE. </GHA-BLOG-TOPIC> 
+To enable this functionality, enable `mpFaultTolerance-4.1` and `mpTelemetry-2.0` in your `server.xml` file and then link:{url-prefix}/docs/latest/microprofile-telemetry.html[configure mpTelemetry-2.0 to export metrics]. The following examples show a minimal configuration for OpenTelemetry to export to your `messages.log` file and a class that generates Fault Tolerance metrics (it must be accessed as a CDI bean).
+
+=== server.xml file configuration
+
+[source,xml]
+----
+<featureManager>
+  <feature>mpFaultTolerance-4.1</feature>
+  <feature>mpTelemetry-2.0</feature>
+</featureManager>
+----
+
+=== bootstrap.properties file configuration
+
+The following example configures OpenTelemetry to only output metrics to the `messages.log` file.
+It also sets a very low interval for exporting metrics so you can see the results quickly.
+
+[source,xml]
+----
+otel.sdk.disabled=false
+otel.metrics.exporter=logging
+otel.logs.exporter=none
+otel.traces.exporter=none
+otel.metric.export.interval=500
+----
+
+=== Example application class
+
+Ensure that this class is injected as a CDI bean and invoked by the user in whatever way you prefer.
+
+[source,xml]
+----
+import org.eclipse.microprofile.faulttolerance.Retry;
+import jakarta.enterprise.context.ApplicationScoped;
+
+@ApplicationScoped
+public class ExampleClass {
+
+    @Retry
+    public int exampleMethod(String name) {
+        return 1;
+    }
+}
+----
+
+=== Learn more
+
+You can read more details about the changes in the new version in the link:https://download.eclipse.org/microprofile/microprofile-fault-tolerance-4.1-RC2/microprofile-fault-tolerance-spec-4.1-RC2.html[Microprofile Fault Tolerance 4.1 RC2 specification] and link:https://download.eclipse.org/microprofile/microprofile-fault-tolerance-4.1-RC2/apidocs/[API Javadoc].
+
+You can learn more about how to use MicroProfile Fault Tolerance from our link:https://openliberty.io/docs/latest/fault-tolerance.html[documentation] and link:https://openliberty.io/guides/#fault_tolerance[guides].
+
+// DO NOT MODIFY THIS LINE. </GHA-BLOG-TOPIC>
 
 
 For more details, check the LINK[LINK_DESCRIPTION].
@@ -298,7 +339,7 @@ For more details, check the LINK[LINK_DESCRIPTION].
 // // // // // // // //
 // In the preceding section:
 // Replace TAG_X/SUB_TAG_X with the given tag of your secton from the contents list
-// Replace SUB_FEATURE_TITLE/FEATURE_X_TITLE with the given title from the contents list 
+// Replace SUB_FEATURE_TITLE/FEATURE_X_TITLE with the given title from the contents list
 // Replace FEATURE with the feature name for the server.xml file e.g. mpHealth-1.4
 // Replace LINK with the link for extra information given for the feature
 // Replace LINK_DESCRIPTION with a readable description of the information
@@ -319,11 +360,11 @@ For more details, check the LINK[LINK_DESCRIPTION].
 // // // // // // // //
 // In the preceding section:
 // If there were any CVEs addressed in this release, fill out the table.  For the information, reference https://github.com/OpenLiberty/docs/blob/draft/modules/ROOT/pages/security-vulnerabilities.adoc.  If it has not been updated for this release, reach out to Kristen Clarke or Michal Broz.
-// Note: When linking to features, use the 
-// `link:{url-prefix}/docs/latest/reference/feature/someFeature-1.0.html[Some Feature 1.0]` format and 
+// Note: When linking to features, use the
+// `link:{url-prefix}/docs/latest/reference/feature/someFeature-1.0.html[Some Feature 1.0]` format and
 // NOT what security-vulnerabilities.adoc does (feature:someFeature-1.0[])
 //
-// If there are no CVEs fixed in this release, replace the table with: 
+// If there are no CVEs fixed in this release, replace the table with:
 // "There are no security vulnerability fixes in Open Liberty [24.0.0.12]."
 // // // // // // // //
 For a list of past security vulnerability fixes, reference the link:{url-prefix}/docs/latest/security-vulnerabilities.html[Security vulnerability (CVE) list].
@@ -434,17 +475,17 @@ java.lang.IllegalArgumentException: com.ibm.ws.jaxrs.fat.customsecuritycontext.f
 +
 
 Changes to the webAppSecurity element are logged.  For example, changes to sameSiteCookie will log:
-```
+----
 [AUDIT   ] CWWKS9112A: The web application security settings have changed. The following properties were modified: sameSiteCookie=Lax
 [AUDIT   ] CWWKS9112A: The web application security settings have changed. The following properties were modified: sameSiteCookie=Strict
-```
+----
 +
-However, if partitionedCookie is modified, liberty will log an **empty string** instead: 
-```
-[AUDIT   ] CWWKS9112A: The web application security settings have changed. The following properties were modified: 
-```
+However, if partitionedCookie is modified, liberty will log an **empty string** instead:
+----
+[AUDIT   ] CWWKS9112A: The web application security settings have changed. The following properties were modified:
+----
 +
-The internal configAttributes  map is used for tracking changes between  _webAppSecurity_ configuration updates.  The _partitionedCookie_ key was not added to this map since it was beta guarded. 
+The internal configAttributes  map is used for tracking changes between  _webAppSecurity_ configuration updates.  The _partitionedCookie_ key was not added to this map since it was beta guarded.
 
 * link:https://github.com/OpenLiberty/open-liberty/issues/29903[Header element child elements are misleadingly called attributes in metatype descriptions]
 +
@@ -454,15 +495,15 @@ The metatype descriptions for several child elements of the `headers` configurat
 These metatype descriptions are used to build the docs on the Open Liberty website but the descritpions need to be fixed at the source rather than in the generated docs. The source for these descriptions is:
 +
 [open-liberty](https://github.com/OpenLiberty/open-liberty/tree/integration)/[dev](https://github.com/OpenLiberty/open-liberty/tree/integration/dev)/[com.ibm.ws.transport.http](https://github.com/OpenLiberty/open-liberty/tree/integration/dev/com.ibm.ws.transport.http)/[resources](https://github.com/OpenLiberty/open-liberty/tree/integration/dev/com.ibm.ws.transport.http/resources)/[OSGI-INF](https://github.com/OpenLiberty/open-liberty/tree/integration/dev/com.ibm.ws.transport.http/resources/OSGI-INF)/[l10n](https://github.com/OpenLiberty/open-liberty/tree/integration/dev/com.ibm.ws.transport.http/resources/OSGI-INF/l10n)
-/metatype.properties 
+/metatype.properties
 +
 
 * link:https://github.com/OpenLiberty/open-liberty/issues/29868[FeatureManager failed to install versionless features from server.xml]
 +
 Failed to install features by server.xml with versionless features
-```
+----
 CWWKF0004E: An unknown exception occurred while installing or removing features. Exception: java.lang.NullPointerException: Cannot invoke "com.ibm.ws.kernel.feature.provisioning.ProvisioningFeatureDefinition.getVisibility()" because "versionedFeatureDef" is null
-```
+----
 
 * link:https://github.com/OpenLiberty/open-liberty/issues/29802[The Gitter link in the default page returns 404]
 +
@@ -479,7 +520,7 @@ CWWKF0004E: An unknown exception occurred while installing or removing features.
 // For this section ask either Michal Broz or Tom Evans or the #openliberty-release-blog channel for Notable bug fixes in this release.
 // Present them as a list in the order as provided, linking to the issue and providing a short description of the bug and the resolution.
 // If the issue on Github is missing any information, leave a comment in the issue along the lines of:
-// "@[issue_owner(s)] please update the description of this `release bug` using the [bug report template](https://github.com/OpenLiberty/open-liberty/issues/new?assignees=&labels=release+bug&template=bug_report.md&title=)" 
+// "@[issue_owner(s)] please update the description of this `release bug` using the [bug report template](https://github.com/OpenLiberty/open-liberty/issues/new?assignees=&labels=release+bug&template=bug_report.md&title=)"
 // Feel free to message the owner(s) directly as well, especially if no action has been taken by them.
 // For inspiration about how to write this section look at previous blogs e.g- 20.0.0.10 or 21.0.0.12 (https://openliberty.io/blog/2021/11/26/jakarta-ee-9.1.html#bugs)
 // // // // // // // //
@@ -494,7 +535,7 @@ CWWKF0004E: An unknown exception occurred while installing or removing features.
 As Open Liberty features and functionality continue to grow, we continue to add link:https://openliberty.io/guides/?search=new&key=tag[new guides to openliberty.io] on those topics to make their adoption as easy as possible.  Existing guides also receive updates to address any reported bugs/issues, keep their content current, and expand what their topic covers.
 
 // // // // // // // //
-// In the following section, list any new guides, or changes/updates to existing guides.  
+// In the following section, list any new guides, or changes/updates to existing guides.
 // The following is an example of how the list can be structured (similar to the bugs section):
 // * link:{url-prefix}/guides/[new/updated guide].html[Guide Title]
 //  ** Description of the guide or the changes made to the guide.
