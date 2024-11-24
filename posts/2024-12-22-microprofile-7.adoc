@@ -82,6 +82,53 @@ To collect and export metrics, enable OpenTelemetry by using the following syste
 
 You can set configuration properties in any of the link:{url-prefix}/docs/latest/external-configuration.html#default[config sources that are available to MicroProfile Config].
 
+[#manualMetrics]
+=== Use the OpenTelemetry API to mannually create metrics
+
+You can use the OpenTelemetry metrics API to define custom metrics in your application code.
+
+Before instrumenting your code, the following prerequisite is required:
+
+* Third-party APIs must be made visible for your application in the 
+link:https://github.com/yasmin-aumeeruddy/mpTelemetry-Demo/blob/main/system/src/main/liberty/config/server.xml#L11-L14[server.xml]:
+
+[source, xml]
+----
+<webApplication location="demo-microprofile-telemetry-inventory.war" contextRoot="/">
+    <!-- enable visibility to third party apis -->
+    <classloader apiTypeVisibility="+third-party"/>
+</webApplication>
+----
+
+You can then use the OpenTelemetry API to create custom metrics. 
+
+[source,java]
+```
+class WithCounter {
+    @Inject
+    Meter meter;
+
+    private LongCounter counter;
+
+    @PostConstruct
+    public void init() {
+        counter = meter
+                    .counterBuilder("new_subscriptions")
+                    .setDescription("Number of new subscriptions")
+                    .setUnit("1")
+                    .build();
+    }
+
+    void subscribe(String plan) {
+        counter.add(1,
+            Attributes.of(AttributeKey.stringKey("plan"), plan));
+    }
+}
+```
+
+In this example, `Meter` is used to define an instrument, in this case a Counter. Application code then can record measurement values along with other attributes. Measurement aggregations are computed separately for each unique combination of attributes.
+
+For a full list of available metrics, see the link:https://opentelemetry.io/docs/specs/otel/metrics/api/#meter-operations#default[meter operations] in the OpenTelemetry documentation.
 
 Enable the `mpTelemetry-2.0` feature and any features that are associated with your chosen supported runtime components. The `mpTelemetry-2.0` feature automatically enables the `monitor-1.0` feature.
 
