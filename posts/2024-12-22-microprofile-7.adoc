@@ -40,7 +40,7 @@ Let's take a look at the individual specification updates.
 
 MicroProfile Rest Client provides a type-safe approach to invoke RESTful services over HTTP. As much as possible, the MicroProfile Rest Client 4.0 release attempts to use link:https://jakarta.ee/specifications/restful-ws/3.1/[Jakarta RESTful Web Services 3.1] APIs for consistency and easier re-use.
 
-The MicroProfile Rest Client 4.0 (implemented by the Liberty feature `mpRestClient-4.0`) aligns with Jakarta RESTful Web Services 3.1 as part of the greater effort to align MicroProfile 7.0 with Jakarta EE10. It also adds the following updates.
+The MicroProfile Rest Client 4.0 (implemented by the Liberty feature `mpRestClient-4.0`) aligns with Jakarta RESTful Web Services 3.1 as part of the greater effort to align MicroProfile 7.0 with Jakarta EE 10. It also adds the following updates.
 
 * Added a new `RestClientBuilder.header(String, Object)` method to add dynamic headers to the request.
 * Added a new `RestClientBuilder.baseUri(String)` overload method so users don't have to call `URI.create(String)`.
@@ -256,16 +256,9 @@ Then you can view the generated OpenAPI document. On a local development server 
 
 Further resources:
 
-- You can read more detail about the changes in MicroProfile OpenAPI 4.0 in the [specification][spec] and [API Javadoc][javadoc].
-- You can learn more about how to use MicroProfile OpenAPI from our [documentation][docs] and [guide][guide].
+- You can read more detail about the changes in MicroProfile OpenAPI 4.0 in the link:https://download.eclipse.org/microprofile/microprofile-open-api-4.0.2/microprofile-openapi-spec-4.0.2.html[specification] and link:https://download.eclipse.org/microprofile/microprofile-open-api-4.0.2/apidocs/[javadoc].
+- You can learn more about how to use MicroProfile OpenAPI from our link:https://openliberty.io/docs/latest/documentation-openapi.html[docs] and link:https://openliberty.io/guides/microprofile-openapi.html[guide].
 
-[release-notes]: https://download.eclipse.org/microprofile/microprofile-open-api-4.0.2/microprofile-openapi-spec-4.0.2.html#release_notes_40
-[multi-app]: https://openliberty.io/docs/latest/documentation-openapi.html#multi-module
-[spec]: https://download.eclipse.org/microprofile/microprofile-open-api-4.0.2/microprofile-openapi-spec-4.0.2.html
-[javadoc]: https://download.eclipse.org/microprofile/microprofile-open-api-4.0.2/apidocs/
-[docs]: https://openliberty.io/docs/latest/documentation-openapi.html
-[guide]: https://openliberty.io/guides/microprofile-openapi.html
-[config-doc]: https://openliberty.io/docs/latest/reference/config/mpOpenAPI.html
 
 [#SUB_TAG_3]
 == Integrate fault tolerance and OpenTelemetry with MicroProfile Fault Tolerance 4.1
