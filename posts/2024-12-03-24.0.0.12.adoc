@@ -22,7 +22,7 @@ The 24.0.0.12 release introduces support for MicroProfile 7.0, a major MicroProf
 
 In link:{url-about}[Open Liberty] 24.0.0.12:
 
-* <<mp7, MicroProfile 7.0>>
+* <<mp7, Develop your microservice applications with MicroProfile 7.0>>
 * <<samesite, Check for SameSite=None incompatible clients>>
 * <<CVEs, Security Vulnerability (CVE) Fixes>>
 
