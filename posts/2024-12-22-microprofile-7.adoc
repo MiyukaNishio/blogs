@@ -11,7 +11,7 @@ blog_description: Everything you need to know about MicroProfile 7.0
 open-graph-image: https://openliberty.io/img/twitter_card.jpg
 open-graph-image-alt: Open Liberty Logo
 ---
-= TITLE
+= MicroProfile 7.0 deep dive with Open Liberty
 Emily Jiang <https://github.com/Emily-Jiang>
 :imagesdir: /
 :url-prefix:
