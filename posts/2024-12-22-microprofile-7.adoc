@@ -215,7 +215,7 @@ link:https://www.openapis.org/[OpenAPI] is a standardised way of documenting RES
 
 The new MicroProfile OpenAPI 4.0 feature (`mpOpenAPI-4.0`) brings support for the latest version of the specification with the following changes:
 
-- Documentation is now produced in link:https://spec.openapis.org/oas/v3.1.0.html[OpenAPI 3.1 format] by default (updated from 3.0 in previous versions). Changes in OpenAPI 3.1 include:
+* Documentation is now produced in link:https://spec.openapis.org/oas/v3.1.0.html[OpenAPI 3.1 format] by default (updated from 3.0 in previous versions). Changes in OpenAPI 3.1 include:
   - Use of full JSON Schema 2020-12 draft for data object schemas (updated from a subset of an older JSON schema draft in 3.0)
   - Support for documenting webhooks
   - Reusable PathItem objects
