@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "MicroProfile 7.0 Deep Dive with Open Liberty"
+title: "MicroProfile 7.0 deep dive with Open Liberty"
 # Do NOT change the categories section
 categories: blog
 author_picture: https://avatars3.githubusercontent.com/Emily-Jiang
