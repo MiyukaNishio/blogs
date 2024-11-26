@@ -22,7 +22,7 @@ MicroProfile provides a set of APIs and tools for developing, deploying, and man
 link:https://microprofile.io/compatible/7-0/[MicroProfile 7.0] was released in August 2024. It is a major release and contains the following significant changes.
 
 * MicroProfile 7.0 no longer packages a particular version of Jakarta EE Core Profile. Instead, it declares the minimum version of Jakarta EE, Jakarta EE 10 Core Profile.
-* MicroProfile Telemetry 2.0 has backward incompatible changes and also brings in Logs and Metrics.
+* MicroProfile Telemetry 2.0  brings in logs and metrics and also includes changes that are incompatible with earlier versions.
 * MicroProfile Metrics is no longer in MicroProfile 7.0, as the metrics capability is supplied by MicroProfile Telemetry 2.0.
 * MicroProfile Rest Client 4.0 has a major release as it aligned with Jakarta RESTful Web Services 3.1.
 * MicroProfile OpenAPI 4.0 aligns with OpenAPI 3.1.
