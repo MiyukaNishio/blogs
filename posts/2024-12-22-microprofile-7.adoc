@@ -5,7 +5,7 @@ title: "MicroProfile 7.0 deep dive with Open Liberty"
 categories: blog
 author_picture: https://avatars3.githubusercontent.com/Emily-Jiang
 author_github: https://github.com/Emily-Jiang
-seo-title: TITLE - MicroProfile 7.0 with Open Liberty - OpenLiberty.io
+seo-title: \MicroProfile 7.0 with Open Liberty - OpenLiberty.io
 seo-description: An introduction to MicroProfile 7.0 
 blog_description: Everything you need to know about MicroProfile 7.0
 open-graph-image: https://openliberty.io/img/twitter_card.jpg
