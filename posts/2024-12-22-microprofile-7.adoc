@@ -231,7 +231,7 @@ Although the OpenAPI 3.1 format is now the default,  you can still configure `mp
 <mpOpenAPI openAPIVersion="3.0" />
 ----
 
-Additionally, this release will include all deployed applications in the OpenAPI documentation by default. If you need more control over which applications are documented, there's new server.xml configuration to include or exclude specific applications and modules and to specify the `info` section of the OpenAPI document.
+This release also includes all deployed applications and modules in the OpenAPI documentation by default. If you need more control over which applications and modules are documented, there's new `server.xml` configuration to include or exclude specific applications and modules and to specify the `info` section of the OpenAPI document.
 
 [source.xml]
 ----
