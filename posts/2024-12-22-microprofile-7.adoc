@@ -60,7 +60,7 @@ For more information, see the following resources:
 [#SUB_TAG_1]
 == MicroProfile Telemetry 2.0 (logs, metrics and tracing)
 
-The link:{url-prefix}/docs/latest/reference/feature/mpTelemetry-2.0.html[MicroProfile Telemetry 2.0] (implemented by the Liberty feature `mpTelemetry-2.0`) helps improve the observability of your Java applications by using OpenTelemetry to collect and export logs, metrics, and traces in a standardized way. Previous versions (1.0, 1.1) of MicroProfile Telemetry could manage only distributed tracing.
+link:{url-prefix}/docs/latest/reference/feature/mpTelemetry-2.0.html[MicroProfile Telemetry 2.0] (implemented by the  `mpTelemetry-2.0` Liberty feature) helps improve the observability of your Java applications by using OpenTelemetry to collect and export logs, metrics, and traces in a standardized way. Previous versions (1.0, 1.1) of MicroProfile Telemetry could manage only distributed tracing.
 
 MicroProfile Telemetry 2.0 provides the latest OpenTelemetry technology. In addition to link:{url-prefix}/docs/latest/microprofile-telemetry.html[distributed tracing], the feature now allows OpenTelemetry to collect and export metrics and logs.
 For information about managing <<metrics, metrics>> and <<logs, logs>> with MicroProfile Telemetry, see the following sections.
