@@ -87,7 +87,7 @@ You can set configuration properties in any of the link:{url-prefix}/docs/latest
 [#manualMetrics]
 === Use the OpenTelemetry API to mannually create metrics
 
-You can use the OpenTelemetry metrics API to define custom metrics in your application code.
+In addition to the supported runtime metric components, you can also use the OpenTelemetry metrics API to define custom metrics in your application code.
 
 Before instrumenting your code, the following prerequisite is required:
 
