@@ -17,7 +17,9 @@ Emily Jiang <https://github.com/Emily-Jiang>
 :url-prefix:
 :url-about: /
 
-link:https://microprofile.io/compatible/7-0/[MicroProfile 7.0] was released in August 2024. It was a major release and contained the following significant changes.
+MicroProfile provides a set of APIs and tools for developing, deploying, and managing microservices in a lightweight and efficient manner. Open Liberty 24.0.0.12 adds support for the MicroProfile 7.0.
+
+link:https://microprofile.io/compatible/7-0/[MicroProfile 7.0] was released in August 2024. It is a major release and contains the following significant changes.
 
 * MicroProfile 7.0 no longer packages a particular version of Jakarta EE Core Profile. Instead, it declares the minimum version of Jakarta EE, Jakarta EE 10 Core Profile.
 * MicroProfile Telemetry 2.0 has backward incompatible changes and also brings in Logs and Metrics.
