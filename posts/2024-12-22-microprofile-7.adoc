@@ -224,7 +224,7 @@ The new MicroProfile OpenAPI 4.0 feature (`mpOpenAPI-4.0`) brings support for th
 
 A detailed list of changes can be found in the link:https://download.eclipse.org/microprofile/microprofile-open-api-4.0.2/microprofile-openapi-spec-4.0.2.html#release_notes_40[release notes of the specification].
 
-Although the OpenAPI 3.1 format is now the default, in Open Liberty, you can still configure `mpOpenAPI-4.0` to output in OpenAPI 3.0 format by configuring `openAPIVersion` in server.xml:
+Although the OpenAPI 3.1 format is now the default,  you can still configure `mpOpenAPI-4.0` to output in OpenAPI 3.0 format by configuring  the`openAPIVersion` attribute in your `server.xml` file:
 
 [source.xml]
 ----
