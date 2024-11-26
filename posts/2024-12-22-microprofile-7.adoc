@@ -284,7 +284,7 @@ If you use MicroProfile Fault Tolerance 4.1 with MicroProfile Metrics 5.1 as wel
 === bootstrap.properties file configuration
 
 The following example configures OpenTelemetry to only output metrics to the `messages.log` file.
-It also sets a very low interval for exporting metrics so you can see the results quickly.
+It also sets a very low interval for exporting metrics so you can see the results quickly. You can use this configuration to easily demo how OpenTelemetry collects and exports you Fault Tolerance metrics.
 
 [source,xml]
 ----
