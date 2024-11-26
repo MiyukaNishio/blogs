@@ -205,7 +205,7 @@ podman run -p 3000:3000 -p 4317:4317 -p 4318:4318 --rm -ti localhost/grafana/ote
 
 The dashboard `localhost:3000` will list the logs, metrics and traces. For more information regarding the Grafana OTEL backend, see link:https://github.com/grafana/docker-otel-lgtm[docker-otel-lgtm].
 
-For more information about using MicroProfile Telemetry to manage your metrics, logs, and traces in a standardized way, see link:{url-prefix}/docs/latest/microprofile-telemetry.html[Enable observability with MicroProfile Telemetry].
+For more information about using MicroProfile Telemetry to manage your metrics, logs, and traces in a standardized way, see link:{url-prefix}/docs/latest/microprofile-telemetry.html[Collect logs, metrics, and traces with OpenTelemetry].
 
 [#SUB_TAG_2]
 == MicroProfile OpenAPI 4.0
