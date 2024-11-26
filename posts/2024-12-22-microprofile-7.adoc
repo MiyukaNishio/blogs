@@ -241,7 +241,7 @@ Additionally, this release will include all deployed applications in the OpenAPI
 </mpOpenAPI>
 ----
 
-More information on these options is available in the [reference documentation][config-doc].
+For more information, see link:{url-prefix}/docs/latest/reference/feature/mpOpenAPI-4.0.html[MicroProfile OpenAPI 4.0] and link:{url-prefix}/docs/latest/documentation-openapi.html#multi-module[Multiple application and multi-module application support with MicroProfile OpenAPI].
 
 To start using the MicroProfile OpenAPI 4.0 feature, enable it in your server.xml and deploy one or more applications developed using Jakarta RESTful Web Services:
 
