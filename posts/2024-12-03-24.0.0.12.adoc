@@ -69,7 +69,7 @@ FROM icr.io/appcafe/open-liberty
 
 Or take a look at our link:{url-prefix}/start/[Downloads page].
 
-If you're using link:https://plugins.jetbrains.com/plugin/14856-liberty-tools[IntelliJ IDEA], link:https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext[Visual Studio Code] or link:https://marketplace.eclipse.org/content/liberty-tools[Eclipse IDE], you can also take advantage of our open source link:https://openliberty.io/docs/latest/develop-liberty-tools.html[Liberty developer tools] to enable effective development, testing, debugging and application management all from within your IDE.
+If you're using link:https://plugins.jetbrains.com/plugin/14856-liberty-tools[IntelliJ IDEA], link:https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext[Visual Studio Code] or link:https://marketplace.eclipse.org/content/liberty-tools[Eclipse IDE], you can also take advantage of our open source link:https://openliberty.io/docs/latest/develop-liberty-tools.html[Liberty developer tools] to enable effective development, testing, debugging, and application management all from within your IDE.
 
 [link=https://stackoverflow.com/tags/open-liberty]
 image::img/blog/blog_btn_stack.svg[Ask a question on Stack Overflow, align="center"]
@@ -78,7 +78,7 @@ image::img/blog/blog_btn_stack.svg[Ask a question on Stack Overflow, align="cent
 [#mp7]
 == Develop your microservice applications with MicroProfile 7.0
 
-MicroProfile provides a set of APIs and tools for developing, deploying, and managing microservices in a lightweight and efficient manner. The 24.0.0.12 release adds support for the MicroProfile programming model version 7.0, a major release. It replaces MicroProfile Metrics with MicroProfile Telemetry. Therefore, MicroProfile Metrics moves out of the umbrella release and becomes a stand-alone specification. This release also introduces the new versions of the MicroProfile OpenAPI, Rest Client, Fault Tolerance, and Telemetry features. For more information, see link:{url-prefix}/blog/2024/12/03/microprofile-7.html[MicroProfile 7.0].
+MicroProfile provides a set of APIs and tools for developing, deploying, and managing microservices in a lightweight and efficient manner. The 24.0.0.12 release adds support for the MicroProfile programming model version 7.0, a major release. It replaces MicroProfile Metrics with MicroProfile Telemetry. Therefore, MicroProfile Metrics moves out of the umbrella release and becomes a stand-alone specification. This release also introduces the new versions of the MicroProfile OpenAPI, Rest Client, Fault Tolerance, and Telemetry features. For more information, see link:{url-prefix}/blog/2024/12/03/microprofile-7.html[MicroProfile 7.0 deep dive with Open Liberty].
 
 // DO NOT MODIFY THIS LINE. </GHA-BLOG-TOPIC>
 
