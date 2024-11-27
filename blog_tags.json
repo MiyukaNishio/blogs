@@ -2,7 +2,8 @@
     "blog_tags": [
         {
             "name": "announcements",
-            "posts": ["24.0.0.12-beta", "24.0.0.11",
+            "posts": ["24.0.0.12",
+                      "24.0.0.12-beta", "24.0.0.11",
                       "24.0.0.11-beta", "24.0.0.10",
                       "24.0.0.10-beta", "24.0.0.9",
                       "24.0.0.9-beta", "liberty-developer-essentials-badge",
@@ -85,7 +86,8 @@
             "featured": "true"
         },{
             "name": "microprofile",
-            "posts": ["24.0.0.10", "24.0.0.9",
+            "posts": ["24.0.0.12",
+                      "24.0.0.10", "24.0.0.9",
                       "rethinking-microservices", "24.0.0.9-beta",
                       "liberty-on-amazon-ecs", "24.0.0.8-beta",
                       "24.0.0.8", "liberty-developer-essentials-badge",
@@ -286,7 +288,7 @@
         },
         {
             "name": "security",
-            "posts": ["zero-migration",
+            "posts": ["24.0.0.12", "zero-migration",
                       "24.0.0.10-beta", "liberty-olo-rh-sso",
                       "24.0.0.8-beta", "24.0.0.3",
                       "DevNexus24", "24.0.0.2-beta",
